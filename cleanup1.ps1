@@ -7,7 +7,6 @@ Remove-Item -Path "C:\Windows\System32\ddrcc.ps1" -Force
 # remove exclusions
 Remove-MpPreference -ExclusionPath "C:\Windows\System32\N0body.exe" -Force
 Remove-MpPreference -ExclusionPath "C:\Windows\System32\temp.ps1" -Force
-Remove-MpPreference -ExclusionPath "C:\Windows\System32\ddrcc.ps1" -Force
 # removes scheduled task
 Unregister-ScheduledTask -TaskName "Telemetry_Prog" -Confirm:$false
 # start final cleanup file
